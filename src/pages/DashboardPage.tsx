@@ -68,10 +68,13 @@ export default function DashboardPage() {
               <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#6b7280', fontSize: 13 }} />
               <YAxis axisLine={false} tickLine={false} tick={{ fill: '#6b7280', fontSize: 12 }}
                 tickFormatter={(v) => `$${v.toLocaleString()}`} />
-              <Tooltip
+              {/* <Tooltip
                 formatter={(value: number) => [`$${value.toLocaleString()}`, '']}
                 contentStyle={{ borderRadius: '12px', border: '1px solid #e5e7eb' }}
-              />
+              /> */}
+              <Tooltip
+  contentStyle={{ borderRadius: '12px', border: '1px solid #e5e7eb' }}
+/>
               <Bar dataKey="amount" radius={[8, 8, 0, 0]}>
                 {chartData.map((entry, i) => (
                   <Cell key={i} fill={entry.color} />
